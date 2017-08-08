@@ -2,9 +2,15 @@
 # coding: utf-8
 import sys
 if (len(sys.argv) > 2): 
-  print "Please contain your enthusiasm and use no more than one file at a time."
+  print "Please only use one file at a time."
   exit()
 
+
+
+if (len(sys.argv) < 2):
+  file = raw_input("Please provide a sorted_models file:")
+else:
+  file = sys.argv[1] 
 
 
 import numpy as np
@@ -13,7 +19,6 @@ import pandas as pd
 from pylab import *
 
 
-file = sys.argv[1]
 models = pd.read_csv(file, sep=' ', names=['model', 'total_score', 'interface_delta_X'])
 x = models['total_score']
 y = models['interface_delta_X']
