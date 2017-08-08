@@ -1,8 +1,13 @@
 import sys
 
 if (len(sys.argv) > 2):
-    print " Please don't be ridiculous. This script can only handle one file at a time."
+    print "Please don't input more than one file at a time."
     exit()
+
+if (len(sys.argv) < 2):
+    file = raw_input("Please provide a sorted_models file:")
+else:
+    file = sys.argv[1]
 
 import numpy as np
 import matplotlib as plt
