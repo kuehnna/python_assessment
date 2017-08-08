@@ -16,3 +16,7 @@ git pull upstream master
 
 Inside the directory named task1, write a python script that reads in the file sorted_models.txt, and plot a scatter plot between total score (x-axis) and interface_delta_X (y-axis). Make the plot as pretty and consistent as you can.
 
+
+### Task 2:
+
+Copy your python regular script file to a new directory named task2. Add an other parameter in the prompt so that the user can set their maximum total_score and ma0ximum interface_delta_X. Now you will add more axis information to the graph (name of the axis). You should use some themes that matplotlib have. Feel feel to adjust font size of axises to make them more reable.
