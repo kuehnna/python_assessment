@@ -13,11 +13,9 @@ else:
   file = sys.argv[1] 
 
 
-import numpy as np
 import matplotlib as plt
 import pandas as pd
 from pylab import *
-
 
 models = pd.read_csv(file, sep=' ', names=['model', 'total_score', 'interface_delta_X'])
 x = models['total_score']
