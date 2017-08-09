@@ -17,6 +17,7 @@ def argumnumber():
     print "Please only use one file at a time. If you were trying to provide max values as commandline arguments, please rerun without those and wait until prompted to enter them."
     exit()
 
+#Lets user decide whether or not to print plot to a file (before displaying it) and lets user either pick their own filename or get an automatically generated one.
 def printtofile():
   expfile = raw_input("Do you want to export figure as .png? Enter [y/n] or enter a filename: ")
   if (expfile == 'y'):
