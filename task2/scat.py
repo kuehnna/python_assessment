@@ -17,6 +17,13 @@ def argumnumber():
     print "Please only use one file at a time. If you were trying to provide max values as commandline arguments, please rerun without those and wait until prompted to enter them."
     exit()
 
+def printtofile():
+  expfile = raw_input("Do you want to export figure as .png? Enter [y/n] or enter a filename: ")
+  if (expfile == 'y'):
+    expname = 'scat_' + 'maxtot_' + str(maxtot) + '_maxinter_' + str(maxinter) + '.png'
+    plt.savefig(expname,format='png')
+  elif (expfile != 'n'):
+    plt.savefig(expfile,format='png')
 
 def main():
   #Before anything happens, number of command-line arguments is checked and appropriate action taken.
@@ -26,7 +33,9 @@ def main():
   else:
     file = sys.argv[1] 
   #Prompts user to provide maxtot and maxinter before progam continues.
+  global maxtot
   maxtot = float(raw_input("Please enter maximum total_score: "))
+  global maxinter
   maxinter = float(raw_input("Please enter maximum interface_delta_X: "))
 
   #Imports DataFrame and filters based on max values provided.
@@ -41,6 +50,7 @@ def main():
   plt.title('interface_delta_x vs total_score', size=16)
   plt.xlabel("total_score", fontsize=13)
   plt.ylabel("interface_delta_X", fontsize=13)
+  printtofile()
   plt.show()
 
 '''
