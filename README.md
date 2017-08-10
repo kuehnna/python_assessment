@@ -23,3 +23,14 @@ Copy your python regular script file to a new directory named task2. Add an othe
 
 ### Task3:
 Copy your python script in part 2 to a new dir called task3. Now divide the data points into 2 groups based on whether the sum of (total_point + interface_delta_X) higher than average or not. Color those two group differently and include a legend for that. Also, in the lower right conner of the graph, include a annotation text of total_score and interface_delta_X of the point that have lowest sum of (total_point + interface_delta_X).
+
+
+### Assessment:
+
+In a new directory assessment, write a python script that:
+- Read in the file rmsd_score_ligand.sc, prompt for maximum rmsd(ligand_rms_no_super_X) and interface_delta_X, and output file name from the user (like what you did in task 3).
+- Divide the data points into 2 groups by comparing their total_score to the average total_score of all the data points that satisfy the user' setup.
+- Plot the rmsd (x-axis) vs the Interface_delta_X (y-axis), set the maximum x and y stick value to maximum rmsd score and maximum Interface_delta_X, respectively.
+- Set labels and font size for axis so that the plot looks pretty
+- Color 2 groups of data differently,and include a legend for that.
+
